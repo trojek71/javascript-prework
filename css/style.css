@@ -22,6 +22,12 @@
       align-items: center;
 }
 
+.info .container .message {
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
 .score .container {
   display: -ms-flexbox;
   display: flex;
