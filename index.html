@@ -1,34 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<div class="container">
-		<div id="buttons">
+	<div class="header">
+		<p>Gra w  kamień papier i nożyce</p>
+	</div>
+	  <section class="game">
+	   <div class="container">
+		  <div class="buttons" id="buttons">
 			<button id="button-rock">kamień</button>
 			<button id="button-paper">papier</button>
 			<button id="button-scissors">nożyce</button>
-		</div>
-		<div id="messages"></div>
-		<div id="result">
-			<br><br>
-			Wygrana gracza<br>
-			<input type="text" id="wynik_gracza">
+		  </div>
+		   <div class="message" id="messages">
 			<br>
-			Wygrana komputera<br>
-			<input type="text" id="wynik_compa">
 			<br>
-			Ilość remisów<br>
-			<input type="text" id="remis">
-			<br><br>
-			Ilość rund <br>
-			<input type="text" id="rundy">
-
+			<br>
 		</div>
-	</div>
+	  </section>
+	  <section class="score">
+		 <div class="container">
+		  	<div class="result" id="result">
+				<br>
+			   <form>
+				<p>Wygrana gracza<br></p>
+				<input type="text" id="wynik_gracza">
+				<br>
+				<p>Wygrana komputera<br></p>
+				<input type="text" id="wynik_compa">
+				<br>
+				<p>Ilość remisów<br></p>
+				<input type="text" id="remis">
+				<br><br>
+				<p>Ilość rund <br></p>
+				<input type="text" id="rundy">
+			   </form>	
+			</div>
+		 </div>	
+	  </section>	
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
