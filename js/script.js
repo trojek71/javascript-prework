@@ -1,7 +1,13 @@
 
 
 
-var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest,userWin=0,userWin1=0, userWin2=0,userWin3=0,compWin=0, remis=0, rundy=0;
+var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest,userWin=0,userWin1=0, userWin2=0,userWin3=0,compWin=0, remis=0, rundy=0,buttonRestart;
+
+
+function refreshPage(){
+  window.location.reload();
+} 
+
 
 
 function buttonClicked(argButtonName) {
@@ -24,6 +30,7 @@ function buttonClicked(argButtonName) {
       return 'kamień';
     }
   }
+  
   
   
   function displayResult(argPlayerMove, argComputerMove) {
@@ -74,5 +81,7 @@ buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 buttonScissors = document.getElementById('button-scissors');
 buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+
+
 
 

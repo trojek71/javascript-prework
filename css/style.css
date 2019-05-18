@@ -23,6 +23,7 @@
 }
 
 .info .container .message {
+  height: 50%;
   text-align: center;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -47,5 +48,10 @@
 
 .score p {
   color: #ecf0f1;
+}
+
+button {
+  margin: 10px auto;
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
