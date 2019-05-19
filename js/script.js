@@ -8,6 +8,20 @@ function refreshPage(){
   window.location.reload();
 } 
 
+function newGame(){
+  //printMessage('nowa gra');
+  rundy=0;
+  userWin=0;
+  userWin1=0;
+  userWin2=0;
+  userWin3=0;
+  compWin=0;
+  remis=0;
+  document.getElementById('wynik_gracza').value=userWin ;
+  document.getElementById('wynik_compa').value=compWin ;
+  document.getElementById('remis').value=remis ;
+  document.getElementById('rundy').value=rundy ;
+}
 
 
 function buttonClicked(argButtonName) {
