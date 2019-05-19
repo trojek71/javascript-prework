@@ -21,6 +21,8 @@ function newGame(){
   document.getElementById('wynik_compa').value=compWin ;
   document.getElementById('remis').value=remis ;
   document.getElementById('rundy').value=rundy ;
+  document.getElementById('gamemessage').value='' ;
+  document.getElementById('resultmessage').value='' ;
 }
 
 
@@ -50,22 +52,28 @@ function buttonClicked(argButtonName) {
   function displayResult(argPlayerMove, argComputerMove) {
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-      printMessage('Wygrywasz!');
+      document.getElementById('gamemessage').value="Wygrywasz !!!";
+      //printMessage('Wygrywasz!');
       userWin1++;
     } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-      printMessage('Wygrywasz!');
+      document.getElementById('gamemessage').value="Wygrywasz !!!";
+      //printMessage('Wygrywasz!');
       userWin2++;
     } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-      printMessage('Wygrywasz!')  ;
+      document.getElementById('gamemessage').value="Wygrywasz !!!";
+      //printMessage('Wygrywasz!')  ;
       userWin3++;
     } else if (argComputerMove == argPlayerMove) {
-      printMessage('Remis');
+      document.getElementById('gamemessage').value="REMIS";
+      //printMessage('Remis');
       remis++;
     } else {
-      printMessage('Przegrywasz :(');
+      document.getElementById('gamemessage').value="Przegrywasz....:(";
+      //printMessage('Przegrywasz :(');
       compWin++;
     }
-    printMessage('Zagrałem ' + argComputerMove + ', a Ty zagrałeś ' + argPlayerMove);
+    document.getElementById('resultmessage').value=('Zagrałem ' + argComputerMove + ', a Ty zagrałeś ' + argPlayerMove);
+    //printMessage('Zagrałem ' + argComputerMove + ', a Ty zagrałeś ' + argPlayerMove);
     userWin=userWin1+userWin2+userWin3;
     rundy=userWin+compWin+remis;
     
